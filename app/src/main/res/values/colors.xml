@@ -7,5 +7,6 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name = "cardbg">#413C3C</color>
+    <color name = "light_black">#72131212</color>
+    <color name = "cardbg">#59CAC4C4</color>
 </resources>
