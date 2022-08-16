@@ -79,13 +79,23 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/pager"
-                android:layout_marginTop="20dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/pager_card"
                 android:layout_width="300dp"
                 android:layout_height="150dp"
-                android:background="@color/cardbg"
-               />
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cardbg"
+                    />
+            </androidx.cardview.widget.CardView>
+
+
+
 
             //to add 4 circles
             <androidx.cardview.widget.CardView
