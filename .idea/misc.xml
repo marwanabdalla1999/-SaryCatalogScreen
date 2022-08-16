@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/drawable/circle.xml" value="0.15087719298245614" />
         <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/page1.xml" value="0.17" />
+        <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/page_1.xml" value="0.13728070175438598" />
+        <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/page_2.xml" value="0.13728070175438598" />
         <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/upper_toolbar.xml" value="0.22" />
       </map>
     </option>
