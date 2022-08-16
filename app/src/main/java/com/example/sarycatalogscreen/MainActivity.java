@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner spinner;
     RecyclerView productRecycler, departmentRecylcer;
-    Toolbar upperToolbar;
+    //Toolbar upperToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         spinner = findViewById(R.id.location_spinner);
         productRecycler = findViewById(R.id.product_recycler);
         departmentRecylcer = findViewById(R.id.department_recycler);
-        upperToolbar = findViewById(R.id.upper_toolbar);
+        //upperToolbar = findViewById(R.id.upper_toolbar);
     }
 
     private void setUpSpinner() {

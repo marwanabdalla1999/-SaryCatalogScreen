@@ -92,9 +92,6 @@
                     android:background="@color/cardbg" />
             </androidx.cardview.widget.CardView>
 
-
-            //to add 4 circles
-
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="90dp"
