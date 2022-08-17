@@ -121,8 +121,6 @@
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="10000dp"
                         app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_1"
-                        app:layout_constraintEnd_toEndOf="@id/ic2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
 
@@ -173,12 +171,8 @@
                         android:layout_marginTop="15dp"
                         android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
-
                         app:cardCornerRadius="1000dp"
                         app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_2"
-                        app:layout_constraintEnd_toEndOf="@id/ic3"
-                        app:layout_constraintStart_toStartOf="@id/ic1"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
@@ -230,9 +224,6 @@
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="1000dp"
                         app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_3"
-                        app:layout_constraintEnd_toEndOf="@id/ic4"
-                        app:layout_constraintStart_toStartOf="@id/ic2"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
@@ -285,9 +276,7 @@
                         android:layout_marginBottom="15dp"
                         app:cardCornerRadius="1000dp"
                         app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_4"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/ic3"
                         app:layout_constraintTop_toTopOf="parent">
 
                         <LinearLayout
