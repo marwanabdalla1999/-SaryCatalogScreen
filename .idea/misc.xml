@@ -12,10 +12,15 @@
         <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/page_2.xml" value="0.13728070175438598" />
         <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/product_viewholder.xml" value="0.22" />
         <entry key="..\:/Users/AS/AndroidStudioProjects/SaryCatalogScreen/app/src/main/res/layout/upper_toolbar.xml" value="0.22" />
+        <entry key="..\:/Users/marwan/StudioProjects/SaryCatalogScreen2/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/marwan/StudioProjects/SaryCatalogScreen2/app/src/main/res/layout/banner_viewpager_item.xml" value="0.20923913043478262" />
+        <entry key="..\:/Users/marwan/StudioProjects/SaryCatalogScreen2/app/src/main/res/layout/department_viewholder.xml" value="0.264" />
+        <entry key="..\:/Users/marwan/StudioProjects/SaryCatalogScreen2/app/src/main/res/layout/product_viewholder.xml" value="0.2" />
+        <entry key="..\:/Users/marwan/StudioProjects/SaryCatalogScreen2/app/src/main/res/layout/view_pager_item.xml" value="0.20923913043478262" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
