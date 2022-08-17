@@ -40,8 +40,8 @@ public class MainActivity extends AppCompatActivity {
         ProductAdapter productAdapter = new ProductAdapter(products);
         DepartmentAdapter departmentAdapter = new DepartmentAdapter(departments);
 
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3);
-        GridLayoutManager gridLayoutManagerDep = new GridLayoutManager(this, 2);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false);
+        GridLayoutManager gridLayoutManagerDep = new GridLayoutManager(this, 2, GridLayoutManager.HORIZONTAL, false);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 
         productRecycler.setAdapter(productAdapter);
