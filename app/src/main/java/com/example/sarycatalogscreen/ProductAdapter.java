@@ -8,11 +8,13 @@ import java.util.*;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.sarycatalogscreen.catalogResponse.catalogModels.Datum;
+
 public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
-    List<Product> products;
+    List<Datum> products;
 
-    public ProductAdapter(List<Product> products) {
+    public ProductAdapter(List<Datum> products) {
         this.products = products;
     }
 
@@ -26,8 +28,8 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-        Product currentProduct = products.get(position);
-        holder.populateProduct(currentProduct);
+        Datum currentProduct = products.get(position);
+        holder.populateProduct(currentProduct,holder.itemView.getContext());
     }
 
     @Override

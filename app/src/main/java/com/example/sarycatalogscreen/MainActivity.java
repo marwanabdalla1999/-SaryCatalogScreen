@@ -1,6 +1,7 @@
 package com.example.sarycatalogscreen;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,8 +13,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toolbar;
 
+import com.example.sarycatalogscreen.ViewModel.CatalogViewModel;
+import com.example.sarycatalogscreen.ViewModel.bannerViewModel;
+import com.example.sarycatalogscreen.bannerResponse.bannerResponse;
+import com.example.sarycatalogscreen.bannerResponse.banners;
 import com.example.sarycatalogscreen.postersViewPagerAdapter.postersAdapter;
 
 import java.util.List;
@@ -24,9 +28,10 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView productRecycler, departmentRecylcer;
     //Toolbar upperToolbar;
         ViewPager2 posters;
-    private   List<String> postersList;
+    private   List<banners> postersList;
     Timer timer;
-
+    private CatalogViewModel catalogViewModel;
+    private bannerViewModel bannerViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,21 +39,28 @@ public class MainActivity extends AppCompatActivity {
 
         findViewsById();
         setUpSpinner();
-        setupViewPager();
+
         List<Product> products = createProductList();
         List<Product> departments = createDepartmentList();
-        ProductAdapter productAdapter = new ProductAdapter(products);
         DepartmentAdapter departmentAdapter = new DepartmentAdapter(departments);
 
         GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 3, GridLayoutManager.HORIZONTAL, false);
         GridLayoutManager gridLayoutManagerDep = new GridLayoutManager(this, 2, GridLayoutManager.HORIZONTAL, false);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
 
-        productRecycler.setAdapter(productAdapter);
+
         productRecycler.setLayoutManager(gridLayoutManager);
         departmentRecylcer.setAdapter(departmentAdapter);
         departmentRecylcer.setLayoutManager(gridLayoutManagerDep);
 
+        CatalogAPI();
+        bannerAPI();
+        observeAnyChange();
+    }
+
+    private void bannerAPI() {
+        bannerViewModel=new ViewModelProvider(this).get(bannerViewModel.class);
+        bannerViewModel.CallBannerAPI();
     }
 
     private void findViewsById(){
@@ -58,11 +70,15 @@ public class MainActivity extends AppCompatActivity {
         posters=findViewById(R.id.pager);
         //upperToolbar = findViewById(R.id.upper_toolbar);
     }
-    private void setupViewPager() {
+    private void setupViewPager(bannerResponse catalogModel) {
         postersList=new ArrayList<>();
-        postersList.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.ad1).toString());
-        postersList.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.ad2).toString());
-        postersList.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.ad3).toString());
+        for (int i=0;i<catalogModel.getResult().size();i++){
+            postersList.add(catalogModel.getResult().get(i));
+
+        }
+       //
+      //  postersList.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.ad2).toString());
+      //  postersList.add(Uri.parse("android.resource://" + getPackageName() + "/" + R.drawable.ad3).toString());
         postersAdapter postersAdapter = new postersAdapter();
         postersAdapter.setPosters(postersList);
         posters.setAdapter(postersAdapter);
@@ -141,5 +157,35 @@ public class MainActivity extends AppCompatActivity {
 
 
         return products;
+    }
+
+
+    //Call moviesAPI from View-model
+    private void CatalogAPI(){
+        catalogViewModel=new ViewModelProvider(this).get(CatalogViewModel.class);
+        catalogViewModel.CallCatalog();
+
+    }
+
+    //observe any change
+    private void observeAnyChange(){
+        catalogViewModel.getCatalog().observe(this, catalogModel -> {
+            if(catalogModel!=null){
+                ProductAdapter productAdapter = new ProductAdapter(catalogModel.getResult().get(3).getData());
+                productRecycler.setAdapter(productAdapter);
+                productAdapter.notifyDataSetChanged();
+
+            }
+        });
+
+
+        bannerViewModel.getbanners().observe(this, catalogModel -> {
+            if(catalogModel!=null){
+                setupViewPager(catalogModel);
+
+
+            }
+        });
+
     }
 }
