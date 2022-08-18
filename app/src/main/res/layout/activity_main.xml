@@ -111,53 +111,53 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ic1"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
-                        app:cardCornerRadius="10000dp"
-                        app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_1"
-                        app:layout_constraintEnd_toEndOf="@id/ic2"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ic1"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginRight="20dp"
                             android:layout_marginBottom="15dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            app:cardCornerRadius="10000dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toTopOf="@id/txt_1"
+                            app:layout_constraintEnd_toEndOf="@id/ic2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/heart2" />
+                        </androidx.cardview.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txt_1"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="مفضلتك"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/ic1"
-                                app:layout_constraintStart_toStartOf="@id/ic1"
-                                app:layout_constraintTop_toBottomOf="@id/ic1" />
-                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txt_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="مفضلتك"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/ic1"
+                            app:layout_constraintStart_toStartOf="@id/ic1"
+                            app:layout_constraintTop_toBottomOf="@id/ic1" />
+                    </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -165,54 +165,54 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ic2"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        app:cardCornerRadius="1000dp"
-                        app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_2"
-                        app:layout_constraintEnd_toEndOf="@id/ic3"
-                        app:layout_constraintStart_toStartOf="@id/ic1"
-                        app:layout_constraintTop_toTopOf="parent">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ic2"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginRight="20dp"
                             android:layout_marginBottom="15dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
+
+                            app:cardCornerRadius="1000dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toTopOf="@id/txt_2"
+                            app:layout_constraintEnd_toEndOf="@id/ic3"
+                            app:layout_constraintStart_toStartOf="@id/ic1"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/fire" />
+                        </androidx.cardview.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txt_2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="مشعلل حولك"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/ic2"
-                                app:layout_constraintStart_toStartOf="@id/ic2"
-                                app:layout_constraintTop_toBottomOf="@id/ic2" />
-                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/txt_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="مشعلل حولك"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/ic2"
+                            app:layout_constraintStart_toStartOf="@id/ic2"
+                            app:layout_constraintTop_toBottomOf="@id/ic2" />
+                    </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -220,54 +220,54 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ic3"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
-                        app:cardCornerRadius="1000dp"
-                        app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_3"
-                        app:layout_constraintEnd_toEndOf="@id/ic4"
-                        app:layout_constraintStart_toStartOf="@id/ic2"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ic3"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginRight="20dp"
                             android:layout_marginBottom="15dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            app:cardCornerRadius="1000dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toTopOf="@id/txt_3"
+                            app:layout_constraintEnd_toEndOf="@id/ic4"
+                            app:layout_constraintStart_toStartOf="@id/ic2"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/discount" />
+                        </androidx.cardview.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txt_3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="قمة التوفير"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/ic3"
-                                app:layout_constraintStart_toStartOf="@id/ic3"
-                                app:layout_constraintTop_toBottomOf="@id/ic3" />
+                        <TextView
+                            android:id="@+id/txt_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="قمة التوفير"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/ic3"
+                            app:layout_constraintStart_toStartOf="@id/ic3"
+                            app:layout_constraintTop_toBottomOf="@id/ic3" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -275,54 +275,54 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/ic4"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:layout_marginLeft="20dp"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="15dp"
-                        android:layout_marginRight="20dp"
                         android:layout_marginBottom="15dp"
-                        app:cardCornerRadius="1000dp"
-                        app:cardElevation="5dp"
-                        app:layout_constraintBottom_toTopOf="@id/txt_4"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@id/ic3"
-                        app:layout_constraintTop_toTopOf="parent">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ic4"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginLeft="20dp"
                             android:layout_marginTop="15dp"
+                            android:layout_marginRight="20dp"
                             android:layout_marginBottom="15dp"
-                            android:gravity="center"
-                            android:orientation="vertical">
+                            app:cardCornerRadius="1000dp"
+                            app:cardElevation="5dp"
+                            app:layout_constraintBottom_toTopOf="@id/txt_4"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@id/ic3"
+                            app:layout_constraintTop_toTopOf="parent">
 
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_gravity="center"
                                 android:src="@drawable/refresh" />
+                        </androidx.cardview.widget.CardView>
 
-                            <TextView
-                                android:id="@+id/txt_4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="5dp"
-                                android:gravity="center"
-                                android:text="طلبتها معانا"
-                                android:textColor="@color/black"
-                                android:textSize="12sp"
-                                android:textStyle="bold"
-                                app:layout_constraintBottom_toBottomOf="parent"
-                                app:layout_constraintEnd_toEndOf="@id/ic4"
-                                app:layout_constraintStart_toStartOf="@id/ic4"
-                                app:layout_constraintTop_toBottomOf="@id/ic4" />
+                        <TextView
+                            android:id="@+id/txt_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="طلبتها معانا"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@id/ic4"
+                            app:layout_constraintStart_toStartOf="@id/ic4"
+                            app:layout_constraintTop_toBottomOf="@id/ic4" />
 
-                        </LinearLayout>
+                    </LinearLayout>
 
-                    </androidx.cardview.widget.CardView>
                 </RelativeLayout>
 
             </LinearLayout>
